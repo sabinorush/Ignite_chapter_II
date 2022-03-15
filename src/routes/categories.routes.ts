@@ -18,7 +18,9 @@ categoriesRoutes.post("/", createCategoryController.handle);
 
 categoriesRoutes.get("/", listCategoriesController.handle);
 
-categoriesRoutes.post("/import", upload.single("file"),
+categoriesRoutes.post(
+  "/import",
+  upload.single("file"),
   importCategoryController.handle
 );
 
